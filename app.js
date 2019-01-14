@@ -22,6 +22,7 @@ nunjucks.configure("views", {
 });
 
 app.use(express.static(path.join(__dirname, "assets")));
+app.use(express.static(path.join(__dirname, "lib")));
 
 app.use(
 	stylus.middleware({

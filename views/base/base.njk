@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="fullpage/dist/fullpage.css" />
+    <link type="text/css" rel="stylesheet" href="stylesheets/{{css}}.css"/>
 </head>
 <body>
+    {% block content %}
+    {% endblock %}
+    <script type="text/javascript" src="fullpage/vendors/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="fullpage/dist/fullpage.js"></script>
+    <script src="js/{{js}}.js"></script>
 </body>
 </html>

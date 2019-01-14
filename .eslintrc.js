@@ -12,5 +12,6 @@ module.exports = {
     indent: ["error", "tab"],
     "linebreak-style": ["error", "unix"],
     semi: ["error", "always"]
-  }
+  },
+  globals: { fullpage: false }
 };
