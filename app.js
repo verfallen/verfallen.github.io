@@ -1,14 +1,35 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
+const stylus = require("stylus");
+const nib = require("nib");
 const path = require("path");
 const fs = require("fs");
-var app = express();
+
 const json = require("./assets/json/data.json");
+
+var app = express();
+
+function compile(str, path) {
+	return stylus(str)
+		.set("filename", path)
+		.use(nib());
+}
 
 nunjucks.configure("views", {
 	autoescape: true,
-	express: app
+	express: app,
+	watch: true
 });
+
+app.use(express.static(path.join(__dirname, "assets")));
+
+app.use(
+	stylus.middleware({
+		src: path.join(__dirname, "./assets"),
+		// dest: path.join(__dirname, "./assets/style"),
+		compile: compile
+	})
+);
 
 app.get("/", function(req, res) {
 	const data = Object.assign(json, { js: "index", css: "index" });
