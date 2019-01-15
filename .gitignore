@@ -15,4 +15,4 @@ docs/_book
 test/
 
 # End of https://www.gitignore.io/api/vuejs
-/assets/stylesheets/*.css
+/assets/style/stylesheets/*.css

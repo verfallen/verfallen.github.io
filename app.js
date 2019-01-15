@@ -12,7 +12,32 @@ var app = express();
 function compile(str, path) {
 	return stylus(str)
 		.set("filename", path)
+		.set("force", true)
 		.use(nib());
+}
+
+function deleteDir(url) {
+	var files = [];
+
+	if (fs.existsSync(url)) {
+		//判断给定的路径是否存在
+
+		files = fs.readdirSync(url); //返回文件和子目录的数组
+		files.forEach(function(file, index) {
+			var curPath = path.join(url, file);
+
+			if (fs.statSync(curPath).isDirectory()) {
+				//同步读取文件夹文件，如果是文件夹，则函数回调
+				deleteDir(curPath);
+			} else {
+				fs.unlinkSync(curPath); //是指定文件，则删除
+			}
+		});
+
+		fs.rmdirSync(url); //清除文件夹
+	} else {
+		console.log("给定的路径不存在！");
+	}
 }
 
 nunjucks.configure("views", {
@@ -26,15 +51,17 @@ app.use(express.static(path.join(__dirname, "lib")));
 
 app.use(
 	stylus.middleware({
-		src: path.join(__dirname, "./assets"),
-		// dest: path.join(__dirname, "./assets/style"),
+		src: path.join(__dirname, "./assets/css"),
+		dest: path.join(__dirname, "./assets/style"),
+		force: true,
+		compress: true,
 		compile: compile
 	})
 );
 
 app.get("/", function(req, res) {
 	const data = Object.assign(json, { js: "index", css: "index" });
-	res.render("index.njk", data);
+	res.render("index.html", data);
 });
 
 app.get("/:filename.html", function(req, res, next) {
@@ -56,6 +83,10 @@ app.get("/:filename.html", function(req, res, next) {
 	} catch (error) {
 		next(error);
 	}
+});
+
+fs.watch("./assets/css/stylesheets", { recursive: true }, function() {
+	deleteDir("./assets/style/stylesheets");
 });
 
 app.listen(3001);
