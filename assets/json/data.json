@@ -1,3 +1,35 @@
 {
-  "name": "wxl"
+  "title": "web前端工程师简历",
+  "menu": [
+    {
+      "name": "HOME",
+      "target": "#firstPage",
+      "icon": "home",
+      "index": 0
+    },
+    {
+      "name": "WHO AM I?",
+      "target": "#secondPage",
+      "index": 1,
+      "icon": "user"
+    },
+    {
+      "name": "SKILL",
+      "target": "#thirdPage",
+      "index": 2,
+      "icon": "briefcase"
+    },
+    {
+      "name": "EXPERIENCE",
+      "target": "#fourthPage",
+      "index": 3,
+      "icon": "wrench"
+    },
+    {
+      "name": "JOB",
+      "target": "#seventhPage",
+      "index": 4,
+      "icon": "eye-open"
+    }
+  ]
 }

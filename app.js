@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname, "lib")));
 
 app.use(
 	stylus.middleware({
-		src: path.join(__dirname, "./assets/css"),
+		src: path.join(__dirname, "./assets/stylus"),
 		dest: path.join(__dirname, "./assets/style"),
 		force: true,
 		compress: true,
@@ -85,7 +85,7 @@ app.get("/:filename.html", function(req, res, next) {
 	}
 });
 
-fs.watch("./assets/css/stylesheets", { recursive: true }, function() {
+fs.watch("./assets/stylus/stylesheets", { recursive: true }, function() {
 	deleteDir("./assets/style/stylesheets");
 });
 

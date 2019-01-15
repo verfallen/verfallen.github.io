@@ -4,22 +4,24 @@ global-reset()
 .menu 
   display block
   text-decoration: none
-  &:hover
+  &:hover,&:after,&:link,&:active,&:focus
     text-decoration: none
+  .icon-round.active
+    background-color #ff0f65
   .icon-round
     display inline-block
     width 60px
     height 60px
     line-height 60px
+    border-radius 50%
     border 2px solid #fff
     color #fff
     &:hover
       background-color #ff0f65
 
 .menu > h3
-  padding: 10px 20px
-  color: #ff6500
+  padding: 15px 10px 30px 10px
+  color: #ff0f65
   font-weight: 800
   text-decoration: none
-  margin 50px
-  background #000
+  font-size 24px

@@ -1,0 +1,31 @@
+{% extends "./base/base.njk" %} {% block content %}
+<div id="fullpage">
+  <div class="section container">
+    <div class="row pad-top-bottom">
+      <div class="col-lg-5 col-md-5 col-sm-5"></div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <ul id="menus">
+          {% for item in menu%}
+          <li class="bounceIn animated">
+            <a href="{{ item.target }}" class="text-center menu">
+              <span
+                class="icon-round glyphicon glyphicon-{{ item.icon }}"
+                aria-hidden="true"
+                style="font-size:30px;width:60px;height:60px"
+              ></span>
+
+              <h3>{{ item.name }}</h3>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="col-lg-5 col-md-5 col-sm-5"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section">Some section</div>
+  <div class="section">Some section</div>
+  <div class="section">Some section</div>
+</div>
+
+{% endblock %}
