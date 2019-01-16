@@ -1,28 +1,40 @@
 {% extends "./base/base.njk" %} {% block content %}
+<div class="col-lg-2 col-md-2 col-sm-2 menus">
+  <ul>
+    {% for item in menu%}
+    <li class="bounceIn animated">
+      <a href="{{ item.target }}" class="text-center menu {{item.class}}">
+        <span
+          class="icon-round glyphicon glyphicon-{{ item.icon }}"
+          aria-hidden="true"
+        ></span>
+
+        <h3>{{ item.name }}</h3>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 <div id="fullpage">
   <div class="section container">
-    <div class="row pad-top-bottom">
-      <div class="col-lg-5 col-md-5 col-sm-5"></div>
-      <div class="col-lg-2 col-md-2 col-sm-2">
-        <ul id="menus">
-          {% for item in menu%}
-          <li class="bounceIn animated">
-            <a href="{{ item.target }}" class="text-center menu">
-              <span
-                class="icon-round glyphicon glyphicon-{{ item.icon }}"
-                aria-hidden="true"
-                style="font-size:30px;width:60px;height:60px"
-              ></span>
-
-              <h3>{{ item.name }}</h3>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        <div class="col-lg-5 col-md-5 col-sm-5"></div>
+    <div class="row pad-top-bottom left">
+      <div class="icon"></div>
+      <h3 class="name">{{ name }}</h4>
+      <h4 class="job">{{ job }}</h5>
+      <h5 class="motto">{{ motto }}</h5>
+      <h5 class="email">
+        <a href="mailto:{{ email }}" class="link">{{ email }}</a>
+      </h5>
+      <div class="links">
+        {% for item in links %}
+        <a href="{{ item.link }}" class="btn btn-default linkTo">
+          <span class="iconfont {{ item.iconClass }}"></span> {{ item.title }}
+        </a>
+        {% endfor %}
       </div>
     </div>
   </div>
+
   <div class="section">Some section</div>
   <div class="section">Some section</div>
   <div class="section">Some section</div>
