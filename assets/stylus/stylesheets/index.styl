@@ -1,7 +1,15 @@
 @import 'nib'
 global-reset()
 
+//颜色变量
+$index_color = #ff0f65
+// $index_color = #96858f
+$white = #ffffff
+$black = #000000
 
+//全局样式
+a.link
+  color: $index_color
 
 .left
   padding-top 40px
@@ -11,12 +19,12 @@ global-reset()
     height 200px
     border-radius 50%
     margin 0 auto
-    border 3px solid #ff0f65
+    border 3px solid $index_color
     background-color #fff
   .name
     font-size 30px
     font-weight bold
-    color #ff0f65
+    color $index_color
     margin 40px 0 30px
   .job
     font-weight normal 
@@ -33,8 +41,8 @@ global-reset()
   .links
     padding-top 100px
     .linkTo
-      color: #ff0f65
-      border-color #ff0f65
+      color: $index_color
+      border-color $index_color
       background-color #ffffff00
       margin-bottom 10px
       margin-right 20px
@@ -61,11 +69,11 @@ global-reset()
     display block
     text-decoration: none
   .active .icon-round
-    background-color #ff0f65
+    background-color $index_color
   &:hover,&:after,&:link,&:active,&:focus
     text-decoration: none
   .icon-round.active
-    background-color #ff0f65
+    background-color $index_color
   .icon-round
     display inline-block
     width 40px
@@ -75,7 +83,7 @@ global-reset()
     border 2px solid #fff
     color #fff
     &:hover
-      background-color #ff0f65
+      background-color $index_color
 
 .menu > h3
   padding 5px 0 15px 0px

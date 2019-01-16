@@ -1,10 +1,38 @@
 {
   "title": "web前端工程师简历",
+  "name": "王晓丽",
+  "job": "前端开发工程师",
+  "subText": "3年经验",
+  "motto": "勿忘初心，方得始终",
+  "email": "cocoder12138@gmail.com",
+  "links": [
+    {
+      "title": "github",
+      "link": "https://github.com/verfallen",
+      "iconClass": "icon-github"
+    },
+    {
+      "title": "juejin",
+      "link": "https://juejin.im/user/5a1e83186fb9a045211e77ce",
+      "iconClass": "icon-blog"
+    },
+    {
+      "title": "zhihu",
+      "link": "https://www.zhihu.com/people/wang-xiao-li-55-41/activities",
+      "iconClass": "icon-zhihu"
+    },
+    {
+      "title": "sina",
+      "link": "https://weibo.com/u/3003098547",
+      "iconClass": "icon-12sina"
+    }
+  ],
   "menu": [
     {
       "name": "HOME",
       "target": "#firstPage",
       "icon": "home",
+      "class": "active",
       "index": 0
     },
     {
