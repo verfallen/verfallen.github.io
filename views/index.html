@@ -1,9 +1,9 @@
 {% extends "./base/base.njk" %} {% block content %}
-<div class="col-lg-2 col-md-2 col-sm-2 menus">
-  <ul>
+<div class="col-lg-2 col-md-2 col-sm-2 menus_container">
+  <ul id="menus">
     {% for item in menu%}
-    <li class="bounceIn animated">
-      <a href="{{ item.target }}" class="text-center menu {{item.class}}">
+    <li class="bounceIn animated" data-menuanchor="{{item.target}}">
+      <a href="#{{ item.target }}" class="text-center menu {{item.class}}">
         <span
           class="icon-round glyphicon glyphicon-{{ item.icon }}"
           aria-hidden="true"
@@ -11,34 +11,74 @@
 
         <h3>{{ item.name }}</h3>
       </a>
-    </li>
+    </li> 
     {% endfor %}
   </ul>
 </div>
 <div id="fullpage">
-  <div class="section container">
-    <div class="row pad-top-bottom left">
-      <div class="icon"></div>
-      <h3 class="name">{{ name }}</h4>
-      <h4 class="job">{{ job }}</h5>
-      <h5 class="motto">{{ motto }}</h5>
-      <h5 class="email">
-        <a href="mailto:{{ email }}" class="link">{{ email }}</a>
-      </h5>
-      <div class="links">
-        {% for item in links %}
-        <a href="{{ item.link }}" class="btn btn-default linkTo">
-          <span class="iconfont {{ item.iconClass }}"></span> {{ item.title }}
-        </a>
-        {% endfor %}
-      </div>
+  <div class="section container first_section">
+    <div class="icon"></div>
+    <h3 class="name">{{ name }}</h4>
+    <h4 class="job">{{ job }}</h5>
+    <h5 class="motto">{{ motto }}</h5>
+    <h5 class="email">
+      <a href="mailto:{{ email }}" class="link">{{ email }}</a>
+    </h5>
+    <div class="links">
+      {% for item in links %}
+      <a href="{{ item.link }}" class="btn btn-default linkTo">
+        <span class="iconfont {{ item.iconClass }}"></span> {{ item.title }}
+      </a>
+      {% endfor %}
     </div>
   </div>
 
-  <div class="section">Some section</div>
+  <div class="section container" id="second_section">
+    <div class="about_us text-center">
+      <h1 class="title">{{info.title}}</h1>
+      <div class="color-strip"></div>
+
+      <div class=" basic_info center-block">
+        <ul class="row">
+          <li class="col-xs-6 col-sm-3">
+            <span class="iconfont icon-shengri"></span>
+              <p>生日</p>
+              <p>{{info.birthday}}</p>
+            </li>
+          <li class="info col-xs-6 col-sm-3">
+            <span class="iconfont icon-xuewei"></span>
+            <p>学历</p>
+            <p>{{info.education}}</p>
+          </li>
+          <li class="info col-xs-6 col-sm-3">
+            <span class="iconfont icon-jingyan"></span>
+            <p>经验</p>
+            <p>{{info.experience}}</p>
+          </li>
+          <li class="info col-xs-6 col-sm-3">
+            <span class="iconfont icon-yonghu"></span>
+            <p>状态</p>
+            <p>{{info.status}}</p>
+          </li>
+          <!-- <li class="info col-xs-6 col-sm-3">
+            <span class="glyphicon glyphicon-map-marker"></span>
+            <p>地点</p>
+            <p>{{info.position}}</p>
+          </li> -->
+        </ul>       
+        <div class="detail center-block">
+          {% for item in info.detail %}
+            <p class="">{{item}}</p>
+          {% endfor %}
+        </div> 
+       
+      </div>
+
+      
+    </div>
+  </div>
   <div class="section">Some section</div>
   <div class="section">Some section</div>
   <div class="section">Some section</div>
 </div>
-
 {% endblock %}

@@ -30,34 +30,59 @@
   "menu": [
     {
       "name": "HOME",
-      "target": "#firstPage",
+      "target": "firstPage",
       "icon": "home",
       "class": "active",
       "index": 0
     },
     {
       "name": "WHO AM I?",
-      "target": "#secondPage",
+      "target": "secondPage",
       "index": 1,
       "icon": "user"
     },
     {
       "name": "SKILL",
-      "target": "#thirdPage",
+      "target": "thirdPage",
       "index": 2,
       "icon": "briefcase"
     },
     {
       "name": "EXPERIENCE",
-      "target": "#fourthPage",
+      "target": "fourthPage",
       "index": 3,
       "icon": "wrench"
     },
     {
       "name": "JOB",
-      "target": "#seventhPage",
+      "target": "fifthPage",
       "index": 4,
       "icon": "eye-open"
     }
-  ]
+  ],
+  "info": {
+    "title": "WHO AM I?",
+    "name": "王晓丽",
+    "age": "25",
+    "graduate": "山西大同大学",
+    "education": "本科",
+    "birthday": "1993-05-01",
+    "english": "CET-6",
+    "experience": "2年半",
+    "job": "前端开发工程师",
+    "position": "天津",
+    "status": "在职",
+    "detail": [
+      "2016年毕业于山西大同大学计算机专业",
+      "大三自学前端，自此入坑，一发不可收拾",
+      "重度代码洁癖患者"
+    ],
+    "prograss": {
+      "html": "90%",
+      "css": "85%",
+      "javascript": "90%",
+      "bootstrap": "80%",
+      "jquery": "80%"
+    }
+  }
 }

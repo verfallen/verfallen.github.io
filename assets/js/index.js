@@ -1,21 +1,21 @@
 var myFullpage = new fullpage("#fullpage", {
 	//导航
-	menu: "#menu",
+	menu: "#menus",
 	lockAnchors: false,
 	anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"],
 	sectionsColor: [
-		"#000000cc",
-		"#3f5f9acc",
+		"#000000bb",
+		"#d9da69bb",
 		"#993399cc",
 		"#ffaaddcc",
 		"#000000cc"
 	],
-	//切换菜单
 	onLeave: function(origin, destination) {
-		const $menu = $(".menu");
-		const index = destination.index;
+		const index = origin.index;
+		const nextIndex = destination.index;
 
-		$menu.removeClass("active");
-		$menu[index].classList.add("active");
+		if (index === 0 && nextIndex === 1) {
+			$(".detail").addClass("animated zoomIn delay-.5s");
+		}
 	}
 });

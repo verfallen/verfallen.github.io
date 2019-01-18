@@ -3,15 +3,27 @@ global-reset()
 
 //颜色变量
 $index_color = #ff0f65
-// $index_color = #96858f
+$second_color = #9b3090
 $white = #ffffff
 $black = #000000
 
 //全局样式
 a.link
-  color: $index_color
+  color  $index_color
+.color-strip {
+    margin  20px auto 30px auto;
+    max-width  250px;
+    height  2px;
+    border-top  0;
+    background  #c4e17f;
+    border-radius  5px;
+    background-image  -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image  -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image  -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image  linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
 
-.left
+.first_section
   padding-top 40px
   text-align center
   div.icon
@@ -41,7 +53,7 @@ a.link
   .links
     padding-top 100px
     .linkTo
-      color: $index_color
+      color  $index_color
       border-color $index_color
       background-color #ffffff00
       margin-bottom 10px
@@ -49,14 +61,18 @@ a.link
       min-width 92px
       &:last-child
         margin-right 0
-.left 
+.first_section 
   .icon
     background url(/img/index/icon1.jpg)
     background-repeat no-repeat
+    background-size cover
     &:hover
       background url(/img/index/icon2.jpeg)
+      background-size cover
+      background-position center center
+      background-repeat no-repeat
 
-.menus 
+.menus_container
   position fixed
   right 20px 
   z-index 999
@@ -67,11 +83,11 @@ a.link
   justify-content flex-end
   .menu 
     display block
-    text-decoration: none
+    text-decoration  none
   .active .icon-round
     background-color $index_color
   &:hover,&:after,&:link,&:active,&:focus
-    text-decoration: none
+    text-decoration  none
   .icon-round.active
     background-color $index_color
   .icon-round
@@ -88,7 +104,68 @@ a.link
 .menu > h3
   padding 5px 0 15px 0px
   color #ffffff
-  font-weight: 800
-  text-decoration: none
+  font-weight  800
+  text-decoration  none
   font-size 20px
 
+
+#second_section
+  .color-strip 
+    margin-bottom 100px
+  .basic_info
+    max-width 800px
+  h1
+    font-size 36px
+    color $index_color
+    // margin 20px 0
+  ul
+    border-radius 10px
+    background-color #f0fac1dd
+    padding 20px 0
+    li
+      color  $second_color
+      display inline-block
+      margin-top 10px
+      span.iconfont
+        font-size 50px
+      p
+        height  30px
+        line-height  30px
+        padding  0
+        width  70%
+        margin  0 auto
+        position relative
+      p:last-child:before
+        content  ""
+        // width 100%
+        background-color  $second_color
+        height  2px
+        display  block
+        top  0
+        left  0
+        transform  rotate(-30deg)
+        position  absolute
+  
+  .detail
+    color $second_color
+    position relative
+    margin-top 100px
+    width 100%
+    max-width 700px
+    p
+      height 26px
+  .detail:before,.detail:after
+    content ""
+    display block
+    width 65px
+    height 65px
+    border-color $second_color
+    border-style solid
+    position absolute
+  .detail:before
+    border-width 2px 0 0 2px
+  .detail:after
+    border-width 0 2px 2px 0
+    right 0
+    bottom 0
+    
