@@ -43,8 +43,32 @@
   content: "\e6ba";
 }
 
+.icon-shengri:before {
+  content: "\e613";
+}
+
 .icon-github1:before {
   content: "\f00a7";
+}
+
+.icon-xuewei:before {
+  content: "\e614";
+}
+
+.icon-nianling-:before {
+  content: "\e609";
+}
+
+.icon-weizhi:before {
+  content: "\e6f8";
+}
+
+.icon-jingyan:before {
+  content: "\e615";
+}
+
+.icon-yonghu:before {
+  content: "\e720";
 }
 
 .icon-github2:before {
