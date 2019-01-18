@@ -111,7 +111,7 @@ a.link
 
 #second_section
   .color-strip 
-    margin-bottom 100px
+    margin-bottom 150px
   .basic_info
     max-width 800px
   h1
@@ -127,7 +127,7 @@ a.link
       display inline-block
       margin-top 10px
       span.iconfont
-        font-size 50px
+        font-size 80px
       p
         height  30px
         line-height  30px
@@ -135,16 +135,14 @@ a.link
         width  70%
         margin  0 auto
         position relative
-      p:last-child:before
-        content  ""
-        // width 100%
-        background-color  $second_color
-        height  2px
-        display  block
-        top  0
-        left  0
-        transform  rotate(-30deg)
-        position  absolute
+        &:last-child:before
+          content  ""
+          background-color  $second_color
+          height  2px
+          display  block
+          top  0
+          left  0
+          transform  rotate(-20deg)
   
   .detail
     color $second_color
@@ -152,6 +150,7 @@ a.link
     margin-top 100px
     width 100%
     max-width 700px
+    margin-bottom 150px
     p
       height 26px
   .detail:before,.detail:after

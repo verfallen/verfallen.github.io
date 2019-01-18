@@ -31,32 +31,26 @@
     {
       "name": "HOME",
       "target": "firstPage",
-      "icon": "home",
-      "class": "active",
-      "index": 0
+      "icon": "home"
     },
     {
       "name": "WHO AM I?",
       "target": "secondPage",
-      "index": 1,
       "icon": "user"
     },
     {
       "name": "SKILL",
       "target": "thirdPage",
-      "index": 2,
       "icon": "briefcase"
     },
     {
       "name": "EXPERIENCE",
       "target": "fourthPage",
-      "index": 3,
       "icon": "wrench"
     },
     {
       "name": "JOB",
       "target": "fifthPage",
-      "index": 4,
       "icon": "eye-open"
     }
   ],

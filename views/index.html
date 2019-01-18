@@ -3,7 +3,7 @@
   <ul id="menus">
     {% for item in menu%}
     <li class="bounceIn animated" data-menuanchor="{{item.target}}">
-      <a href="#{{ item.target }}" class="text-center menu {{item.class}}">
+      <a href="#{{ item.target }}" class="text-center menu">
         <span
           class="icon-round glyphicon glyphicon-{{ item.icon }}"
           aria-hidden="true"
@@ -42,23 +42,23 @@
         <ul class="row">
           <li class="col-xs-6 col-sm-3">
             <span class="iconfont icon-shengri"></span>
-              <p>生日</p>
-              <p>{{info.birthday}}</p>
+              <p class="text-left">生日</p>
+              <p class="text-right">{{info.birthday}}</p>
             </li>
           <li class="info col-xs-6 col-sm-3">
             <span class="iconfont icon-xuewei"></span>
-            <p>学历</p>
-            <p>{{info.education}}</p>
+            <p class="text-left">学历</p>
+            <p class="text-right">{{info.education}}</p>
           </li>
           <li class="info col-xs-6 col-sm-3">
             <span class="iconfont icon-jingyan"></span>
-            <p>经验</p>
-            <p>{{info.experience}}</p>
+            <p class="text-left">经验</p>
+            <p class="text-right">{{info.experience}}</p>
           </li>
           <li class="info col-xs-6 col-sm-3">
             <span class="iconfont icon-yonghu"></span>
-            <p>状态</p>
-            <p>{{info.status}}</p>
+            <p class="text-left">状态</p>
+            <p class="text-right">{{info.status}}</p>
           </li>
           <!-- <li class="info col-xs-6 col-sm-3">
             <span class="glyphicon glyphicon-map-marker"></span>
