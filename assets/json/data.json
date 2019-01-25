@@ -78,5 +78,55 @@
       "bootstrap": "80%",
       "jquery": "80%"
     }
+  },
+  "skills": {
+    "title": "SKILL",
+    "detail": [
+      {
+        "title": "HTML5",
+        "desc": "熟悉语义化标签，熟悉多媒体元素的应用及本地存储等等",
+        "icon": "#icon-HTML"
+      },
+      {
+        "title": "CSS3",
+        "desc": "熟悉CSS3新特性，包括但不仅限于渐变、过渡，动画，多背景等等",
+        "icon": "#icon-CSS"
+      },
+      {
+        "title": "javascript",
+        "desc": "熟练掌握原生js，熟悉ES6/ES7/ES8等新特性",
+        "icon": "#icon-JavaScript"
+      },
+      {
+        "title": "jQuery",
+        "desc": "熟悉用jQuery框架，处理各种浏览器兼容问题",
+        "icon": "#icon-jQuery"
+      },
+      {
+        "title": "Bootsrap",
+        "desc": "熟悉Bootstrap样式和组件的书写，熟练运用其处理响应式页面",
+        "icon": "#icon-Bootstrap"
+      },
+      {
+        "title": "React",
+        "desc": "熟悉 react + redux + react-route 使用 ",
+        "icon": "#icon-React"
+      },
+      {
+        "title": "Vue",
+        "desc": "熟悉vue 框架，熟练vue + vue-router + vuex 进行移动端开发",
+        "icon": "#icon-Vue"
+      },
+      {
+        "title": "Webpack",
+        "desc": "熟练使用webpack打包工具及相关插件",
+        "icon": "#icon-webpack"
+      },
+      {
+        "title": "node",
+        "desc": "了解nodeJs 基础api 使用，熟练使用npm/yarn 等包管理工具",
+        "icon": "#icon-nodejs-copy"
+      }
+    ]
   }
 }

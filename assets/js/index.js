@@ -6,7 +6,7 @@ var myFullpage = new fullpage("#fullpage", {
 	sectionsColor: [
 		"#000000bb",
 		"#d9da69bb",
-		"#993399cc",
+		"#b0bab1cc",
 		"#ffaaddcc",
 		"#000000cc"
 	],
@@ -19,3 +19,14 @@ var myFullpage = new fullpage("#fullpage", {
 		}
 	}
 });
+
+$(".box").hover(
+	function() {
+		var overlay = $(this).find(".box-overlay");
+		overlay.removeClass(overlay.data("return")).addClass(overlay.data("hover"));
+	},
+	function() {
+		var overlay = $(this).find(".box-overlay");
+		overlay.removeClass(overlay.data("hover")).addClass(overlay.data("return"));
+	}
+);
