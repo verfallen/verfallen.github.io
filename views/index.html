@@ -97,7 +97,32 @@
       {% endfor %}
     </div>
   </div>
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
+  <div class="section">
+    <h1 class="title text-center">{{experience.title}}</h1>
+    <div class="color-strip"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-timeline">
+            {% for item in experience.details %}
+              <div class="timeline">
+                <div class="timeline-icon">
+                  <span class="year">{{item.date}}</span>
+                </div>
+                <p class="desc_tip animated fadeIn">{{item.respo}}</p>
+                <div class="timeline-content">
+                  <h3 class="title">{{item.company}}</h3>
+                  <p class="description">
+                    {{item.respo}}
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">section</div>
 </div>
 {% endblock %}

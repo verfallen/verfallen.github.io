@@ -7,7 +7,7 @@ var myFullpage = new fullpage("#fullpage", {
 		"#000000bb",
 		"#d9da69bb",
 		"#b0bab1cc",
-		"#ffaaddcc",
+		"#9068becc",
 		"#000000cc"
 	],
 	onLeave: function(origin, destination) {
