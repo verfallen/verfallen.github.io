@@ -61,6 +61,9 @@ app.use(
 
 app.get("/", function(req, res) {
 	const data = Object.assign(json, { js: "index", css: "index" });
+	data.projects.details.forEach((v, k) => {
+		v.index = k + 1;
+	});
 	res.render("index.html", data);
 });
 
