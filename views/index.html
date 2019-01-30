@@ -123,6 +123,24 @@
       </div>
     </div>
   </div>
-  <div class="section">section</div>
+  <div class="section">
+    <!-- <h1 class="title text-center">{{projects.title}}</h1> -->
+    <!-- <div class="color-strip"></div> -->
+    <div class="projects center-block">
+      {% for item in projects.details %}
+        <div class="project{{item.index}} project">
+          <img class="img" src="img/project_imgs/{{item.index}}.jpg" alt="">
+          <div class="desc_container">
+            <h3 class="title">{{item.name}}</h3>
+            <p class="date">{{item.date}}</p>
+            <p class="desc">{{item.desc}}</p>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="project7 project"><img src="img/project_imgs/1.jpg" alt="" class="img"></div>
+      <div class="project8 project"><img src="img/project_imgs/2.jpg" alt="" class="img"></div>
+      <div class="project9 project"><img src="img/project_imgs/3.jpg" alt="" class="img"></div>
+    </div>
+  </div>
 </div>
 {% endblock %}

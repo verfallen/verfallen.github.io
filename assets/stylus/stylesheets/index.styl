@@ -266,3 +266,74 @@ a.link
   left 50px
 .timeline:hover .desc_tip
   display block
+
+.projects
+  // height 700px
+  width 1200px
+  height 714px
+  position relative
+  .project
+    width 32.5%
+    height 31.8%
+    margin 0 15px 15px 0
+    float left
+    overflow hidden
+    color $white
+    background-color #f6402b
+    text-align center
+    vertical-align middle
+    position absolute
+    overflow hidden
+    &:nth-child(2)
+      background-color #eb1461
+      left 33.3%
+    &:nth-child(3)
+      background-color #cdd422
+      left 66.6%
+    &:nth-child(4)
+      background-color #e05915
+      top 33.3%
+    &:nth-child(5)
+      background-color #01ebb6
+      top 33.3%
+      left 33.3%
+    &:nth-child(6)
+      background-color #01ebb6
+      top 33.3%
+      left 66.6%
+    &:nth-child(7)
+      background-color #3195aa
+      top 66.6%
+    &:nth-child(8)
+      background-color #431c5d
+      top 66.6%
+      left 33.3%
+    &:nth-child(9)  
+      background-color #e05915
+      top 66.6%
+      left 66.6%
+    .desc_container
+      display none
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      background-color #000000cc
+      .title
+        font-weight 300
+        font-size 40px
+        text-align center
+        margin 0 10px
+      .date
+        font-weight bolder
+        font-size 20px
+        font-family:georgia 
+        margin-top 20px
+        margin 0 20px 10px 0
+      .desc
+        padding 0 30px
+        text-align left 
+        line-height 25px
+        text-indent 2em
+  
