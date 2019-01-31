@@ -20,82 +20,16 @@ var myFullpage = new fullpage("#fullpage", {
 	}
 });
 
-$(".project").hover(
+$(".box").hover(
 	function() {
-		var overlay = $(this).find(".project-overlay");
+		var overlay = $(this).find(".box-overlay");
 		overlay.removeClass(overlay.data("return")).addClass(overlay.data("hover"));
 	},
 	function() {
-		var overlay = $(this).find(".project-overlay");
+		var overlay = $(this).find(".box-overlay");
 		overlay.removeClass(overlay.data("hover")).addClass(overlay.data("return"));
 	}
 );
-
-const nine = [[1, 2, 3], [4, 5, 6], [6, 7, 8]];
-function findIndexFrom(arr, n) {
-	let result = "";
-	arr.forEach((item, k) => {
-		const key = item.indexOf(n);
-		if (key !== -1) {
-			result = `${k}-${item.indexOf(n)}`;
-		}
-	});
-	return result;
-}
-
-// $(".project").on("mouseover", e => {
-// 	const target = e.currentTarget;
-// 	const [row, col] = findIndexFrom(nine, parseInt(target.dataset.index))
-// 		.split("-")
-// 		.map(v => parseInt(v, 10));
-// 	const next = row === nine.length ? row - 1 : row + 1;
-// 	const siblings = nine[row].filter((v, k) => k !== col);
-
-// 	$(target)
-// 		.stop(true, true)
-// 		.animate({ width: "40%", height: "66%" });
-// 	// .children(".img")
-// 	// .animate({ width: "200%" });
-// 	const $project = $(".project");
-
-// 	for (let i = 0; i < $project.length; i++) {
-// 		if (siblings.map(v => (v = v - 1)).includes(i))
-// 			$($project[i])
-// 				.stop(true, true)
-// 				.animate({ width: "30%" });
-// 		if (nine[next].includes(i))
-// 			$($project[i])
-// 				.stop(true, true)
-// 				.animate({ width: "20%" });
-// 		console.log($($project[i]).width());
-// 	}
-// });
-
-// $(".project").on("mouseout", e => {
-// 	const target = e.currentTarget;
-// 	const [row, col] = findIndexFrom(nine, parseInt(target.dataset.index))
-// 		.split("-")
-// 		.map(v => parseInt(v, 10));
-// 	const next = row === nine.length ? row - 1 : row + 1;
-// 	const siblings = nine[row].filter((v, k) => k !== col);
-
-// 	$(target)
-// 		.stop(true, true)
-// 		.animate({ width: "33.3%", height: "33.3%" });
-
-// 	const $project = $(".project");
-
-// 	for (let i = 0; i < $project.length; i++) {
-// 		if (siblings.map(v => (v = v - 1)).includes(i))
-// 			$($project[i])
-// 				.stop(true, true)
-// 				.animate({ width: "33.3%" });
-// 		if (nine[next].includes(i))
-// 			$($project[i])
-// 				.stop(true, true)
-// 				.animate({ width: "33.3%" });
-// 	}
-// });
 
 $(".project1").mouseover(function(event) {
 	$(".project1")
