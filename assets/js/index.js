@@ -177,7 +177,10 @@ $(".project2").mouseout(function(event) {
 $(".project3").mouseover(function(event) {
 	$(".project3")
 		.stop(true, true)
-		.animate({ width: "500px", height: "471px", left: "700", top: "0px" }, 300);
+		.animate(
+			{ width: "500px", height: "471px", left: "700px", top: "0px" },
+			300
+		);
 	$(".project1")
 		.stop(true, true)
 		.animate({ width: "335px", height: "228px", left: "0px", top: "0px" }, 200);
