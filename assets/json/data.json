@@ -34,7 +34,7 @@
       "icon": "home"
     },
     {
-      "name": "WHO AM I?",
+      "name": "WHO AM I",
       "target": "secondPage",
       "icon": "user"
     },
@@ -49,13 +49,13 @@
       "icon": "wrench"
     },
     {
-      "name": "JOB",
+      "name": "PROJECTS",
       "target": "fifthPage",
       "icon": "eye-open"
     }
   ],
   "info": {
-    "title": "WHO AM I?",
+    "title": "WHO AM I",
     "name": "王晓丽",
     "age": "25",
     "graduate": "山西大同大学",

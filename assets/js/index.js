@@ -64,6 +64,30 @@ new fullpage("#fullpage", {
 					});
 			});
 		}
+		if (index === 3 && nextIndex === 4) {
+			$("#fifthSection .section-header").addClass("animated flash");
+			const projects = Array.from($("#fifthSection .project"));
+			projects.forEach((element, k) => {
+				let type;
+				switch (k % 3) {
+				case 0:
+					type = "zoomInLeft";
+					break;
+				case 1:
+					type = "zoomIn";
+					break;
+				default:
+					type = "zoomInRight";
+					break;
+				}
+
+				$(element)
+					.addClass(`animated ${type}`)
+					.css({
+						"animation-delay": `${k * 0.3 + 0.5}s`
+					});
+			});
+		}
 	}
 });
 
