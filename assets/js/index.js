@@ -1,5 +1,4 @@
 new WOW().init();
-
 new fullpage("#fullpage", {
 	//导航
 	menu: "#menus",
@@ -7,7 +6,7 @@ new fullpage("#fullpage", {
 	anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"],
 	sectionsColor: [
 		"#000000bb",
-		"#d9da69bb",
+		"#dddfd4bb",
 		"#b0bab1cc",
 		"#9068becc",
 		"#f2cbbcbb"
@@ -16,8 +15,24 @@ new fullpage("#fullpage", {
 		const index = origin.index;
 		const nextIndex = destination.index;
 
+		// 第一页到第二页过渡
 		if (index === 0 && nextIndex === 1) {
-			$(".detail").addClass("animated zoomIn delay-.5s");
+			$(".section-header")
+				.addClass("animated heartBeat")
+				.css({ "animation-delay": ".2s" });
+			$(".detail")
+				.addClass("animated zoomIn")
+				.css({ "animation-delay": "2s" });
+
+			$(".row")
+				.addClass("animated rotateIn")
+				.css({ "animation-delay": ".4s", "animation-duration": "0.2s" });
+			const lis = Array.from($(".row li"));
+			lis.forEach((li, k) => {
+				$(li)
+					.addClass(`animated bounce`)
+					.css("animation-delay", `${k * 0.2 + 0.8}s`);
+			});
 		}
 	}
 });
