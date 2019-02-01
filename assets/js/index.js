@@ -34,6 +34,21 @@ new fullpage("#fullpage", {
 					.css("animation-delay", `${k * 0.2 + 0.8}s`);
 			});
 		}
+
+		if (index === 1 && nextIndex === 2) {
+			$("#thirdSection .section-header")
+				.addClass("animated bounceInDown")
+				.css({ "animation-delay": ".2s" });
+			const $boxs = Array.from($("#thirdSection .box"));
+			$boxs.forEach((box, k) => {
+				$(box)
+					.addClass("animated slideInLeft")
+					.css({
+						"animation-delay": `${(k % 3) * 0.3 + 0.5}s`,
+						"animation-duration": "0.2s"
+					});
+			});
+		}
 	}
 });
 

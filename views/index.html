@@ -79,8 +79,10 @@
     </div>
   </div>
   <div class="section container" id="thirdSection">
-    <h1 class="title text-center">{{skills.title}}</h1>
-    <div class="color-strip"></div>
+    <div class="section-header">
+      <h1 class="title text-center">{{skills.title}}</h1>
+      <div class="color-strip"></div>
+    </div>
     <div class="skills-container">
       {% for item in skills.detail %}
       <div class="box">
@@ -93,7 +95,7 @@
             <use xlink:href="{{item.icon}}"></use>
           </svg>
         </div>
-        <a class="link" href="#" target="_blank"></a>						
+        <a class="link" href="javascript:;"></a>						
       </div>
       {% endfor %}
     </div>
