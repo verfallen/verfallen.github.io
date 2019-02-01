@@ -65,7 +65,9 @@ new fullpage("#fullpage", {
 			});
 		}
 		if (index === 3 && nextIndex === 4) {
-			$("#fifthSection .section-header").addClass("animated flash");
+			$("#fifthSection .section-header")
+				.addClass("animated flash")
+				.css({ "animation-delay": ".3s" });
 			const projects = Array.from($("#fifthSection .project"));
 			projects.forEach((element, k) => {
 				let type;
