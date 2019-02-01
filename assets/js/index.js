@@ -1,4 +1,6 @@
-var myFullpage = new fullpage("#fullpage", {
+new WOW().init();
+
+new fullpage("#fullpage", {
 	//导航
 	menu: "#menus",
 	lockAnchors: false,
@@ -22,11 +24,11 @@ var myFullpage = new fullpage("#fullpage", {
 
 $(".box").hover(
 	function() {
-		var overlay = $(this).find(".box-overlay");
+		const overlay = $(this).find(".box-overlay");
 		overlay.removeClass(overlay.data("return")).addClass(overlay.data("hover"));
 	},
 	function() {
-		var overlay = $(this).find(".box-overlay");
+		const overlay = $(this).find(".box-overlay");
 		overlay.removeClass(overlay.data("hover")).addClass(overlay.data("return"));
 	}
 );
@@ -65,7 +67,7 @@ $(".project1").mouseover(function(event) {
 			{ width: "218px", height: "228px", left: "981px", top: "243px" },
 			200
 		);
-	event.stopPropagation(); //  阻止事件冒泡
+	event.stopPropagation();
 });
 $(".project1").mouseout(function(event) {
 	$(".project1")
@@ -101,6 +103,7 @@ $(".project1").mouseout(function(event) {
 			{ width: "390px", height: "228px", left: "810px", top: "243px" },
 			200
 		);
+	event.stopPropagation();
 });
 
 //project2
@@ -171,6 +174,7 @@ $(".project2").mouseout(function(event) {
 			{ width: "390px", height: "228px", left: "810px", top: "243px" },
 			200
 		);
+	event.stopPropagation();
 });
 
 //project3
@@ -244,6 +248,7 @@ $(".project3").mouseout(function(event) {
 			{ width: "390px", height: "228px", left: "810px", top: "243px" },
 			200
 		);
+	event.stopPropagation();
 });
 
 //project4
@@ -320,6 +325,7 @@ $(".project4").mouseout(function(event) {
 			{ width: "390px", height: "228px", left: "810px", top: "486px" },
 			200
 		);
+	event.stopPropagation();
 });
 
 //project5
@@ -396,6 +402,7 @@ $(".project5").mouseout(function(event) {
 			{ width: "390px", height: "228px", left: "810px", top: "486px" },
 			200
 		);
+	event.stopPropagation();
 });
 
 //project6
@@ -475,6 +482,7 @@ $(".project6").mouseout(function(event) {
 			{ width: "390px", height: "228px", left: "810px", top: "486px" },
 			200
 		);
+	event.stopPropagation();
 });
 
 $(".project").on("mouseover", function(e) {

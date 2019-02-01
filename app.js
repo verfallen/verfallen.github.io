@@ -61,6 +61,12 @@ app.use(
 
 app.get("/", function(req, res) {
 	const data = Object.assign(json, { js: "index", css: "index" });
+	data.menu.forEach((v, k) => {
+		v.delay = k * 0.2;
+	});
+	data.links.forEach((v, k) => {
+		v.delay = k * 0.1 + 1.2;
+	});
 	data.projects.details.forEach((v, k) => {
 		v.index = k + 1;
 	});

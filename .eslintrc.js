@@ -13,5 +13,5 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     semi: ["error", "always"]
   },
-  globals: { fullpage: false, $: false }
+  globals: { fullpage: false, $: false, WOW: false }
 };

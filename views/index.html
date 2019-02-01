@@ -2,7 +2,7 @@
 <div class="col-lg-2 col-md-2 col-sm-2 menus_container">
   <ul id="menus">
     {% for item in menu%}
-    <li class="bounceIn animated" data-menuanchor="{{item.target}}">
+    <li class="bounceIn animated wow" data-menuanchor="{{item.target}}" data-wow-delay="{{item.delay}}s" data-wow-duration="1s">
       <a href="#{{ item.target }}" class="text-center menu">
         <span
           class="icon-round glyphicon glyphicon-{{ item.icon }}"
@@ -17,16 +17,16 @@
 </div>
 <div id="fullpage">
   <div class="section container first_section">
-    <div class="icon"></div>
-    <h3 class="name">{{ name }}</h4>
-    <h4 class="job">{{ job }}</h5>
-    <h5 class="motto">{{ motto }}</h5>
-    <h5 class="email">
+    <div class="icon animated bounceIn wow" data-wow-delay="0.2s"></div>
+    <h3 class="name animated bounceIn wow" data-wow-delay="0.4s">{{ name }}</h4>
+    <h4 class="job animated bounceIn wow" data-wow-delay="0.6s">{{ job }}</h5>
+    <h5 class="motto animated bounceIn wow" data-wow-delay="0.8s">{{ motto }}</h5>
+    <h5 class="email animated bounceIn wow" data-wow-delay="1s">
       <a href="mailto:{{ email }}" class="link">{{ email }}</a>
     </h5>
     <div class="links">
       {% for item in links %}
-      <a href="{{ item.link }}" class="btn btn-default linkTo">
+      <a href="{{ item.link }}" class="btn btn-default linkTo animated wow zoomInLeft" data-wow-delay="{{item.delay}}s" data-wow-duration="1s" >
         <span class="iconfont {{ item.iconClass }}"></span> {{ item.title }}
       </a>
       {% endfor %}
