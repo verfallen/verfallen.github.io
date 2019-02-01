@@ -8,7 +8,7 @@ new fullpage("#fullpage", {
 		"#000000bb",
 		"#dddfd4bb",
 		"#b0bab1cc",
-		"#9068becc",
+		"#c2dde6cc",
 		"#f2cbbcbb"
 	],
 	onLeave: function(origin, destination) {
@@ -46,6 +46,21 @@ new fullpage("#fullpage", {
 					.css({
 						"animation-delay": `${(k % 3) * 0.3 + 0.5}s`,
 						"animation-duration": "0.2s"
+					});
+			});
+		}
+
+		if (index === 2 && nextIndex === 3) {
+			$("#fourthSection .section-header")
+				.addClass("animated bounceInUp")
+				.css({ "animation-delay": "2s" });
+			const $timeLines = Array.from($("#fourthSection .timeline"));
+			$timeLines.forEach((element, k) => {
+				const type = k % 2 ? "bounceInRight" : "bounceInLeft";
+				$(element)
+					.addClass(`animated ${type}`)
+					.css({
+						"animation-delay": `${k * 0.3 + 0.5}s`
 					});
 			});
 		}
