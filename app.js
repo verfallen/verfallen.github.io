@@ -40,7 +40,7 @@ function deleteDir(url) {
 	}
 }
 
-nunjucks.configure("_layouts", {
+nunjucks.configure("/", {
 	autoescape: true,
 	express: app,
 	watch: true
