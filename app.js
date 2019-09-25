@@ -1,3 +1,5 @@
+/*eslint-disable no-console */
+
 const express = require("express");
 const nunjucks = require("nunjucks");
 const stylus = require("stylus");
@@ -40,7 +42,7 @@ function deleteDir(url) {
 	}
 }
 
-nunjucks.configure("/", {
+nunjucks.configure("views", {
 	autoescape: true,
 	express: app,
 	watch: true
